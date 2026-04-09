@@ -19,7 +19,7 @@ export default function Footer() {
         <button
           type="button"
           onClick={goToHome}
-          className={`flex flex-col items-center ${isActiveRoute("/dashboard") ? "text-indigo-600" : "text-gray-500"}`}
+          className={`cursor-pointer flex flex-col items-center ${isActiveRoute("/dashboard") ? "text-indigo-600" : "text-gray-500"}`}
         >
           <Home size={22} />
           <span className="text-xs mt-1">Início</span>
@@ -28,14 +28,14 @@ export default function Footer() {
         <button
           type="button"
           onClick={goToInvestments}
-          className={`flex flex-col items-center ${isActiveRoute("/dashboard/investimentos") ? "text-indigo-600" : "text-gray-500"}`}
+          className={`cursor-pointer flex flex-col items-center ${isActiveRoute("/dashboard/investimentos") ? "text-indigo-600" : "text-gray-500"}`}
         >
           <TrendingUp size={22} />
           <span className="text-xs mt-1">Investir</span>
         </button>
 
         <div className="absolute -top-6">
-          <button className="w-14 h-14 rounded-full bg-indigo-600 text-white flex items-center justify-center shadow-lg">
+          <button className="cursor-pointer w-14 h-14 rounded-full bg-indigo-600 text-white flex items-center justify-center shadow-lg">
             <Plus size={28} />
           </button>
         </div>
@@ -43,7 +43,7 @@ export default function Footer() {
         <button
           type="button"
           onClick={goToCards}
-          className={`flex flex-col items-center ${isActiveRoute("/dashboard/cartoes") ? "text-indigo-600" : "text-gray-500"}`}
+          className={`cursor-pointer flex flex-col items-center ${isActiveRoute("/dashboard/cartoes") ? "text-indigo-600" : "text-gray-500"}`}
         >
           <CreditCard size={22} />
           <span className="text-xs mt-1">Cartões</span>
@@ -52,7 +52,7 @@ export default function Footer() {
         <button
           type="button"
           onClick={goToProfile}
-          className={`flex flex-col items-center ${isActiveRoute("/dashboard/perfil") ? "text-indigo-600" : "text-gray-500"}`}
+          className={`cursor-pointer flex flex-col items-center ${isActiveRoute("/dashboard/perfil") ? "text-indigo-600" : "text-gray-500"}`}
         >
           <User size={22} />
           <span className="text-xs mt-1">Perfil</span>

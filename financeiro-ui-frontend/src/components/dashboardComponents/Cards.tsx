@@ -103,6 +103,113 @@ const Cards = () => {
 
             </div>
 
+            <div className="relative rounded-3xl p-8 text-white overflow-hidden shadow-lg bg-gradient-to-br from-gray-800 via-gray-900 to-black">
+
+  <div className="absolute -top-16 -right-16 w-56 h-56 bg-white/10 rounded-full"></div>
+  <div className="absolute -bottom-16 -left-16 w-56 h-56 bg-white/10 rounded-full"></div>
+
+  <div className="relative z-10">
+
+    <div className="flex justify-between items-start">
+      <div>
+        <p className="text-sm text-gray-300">Cartão de Crédito</p>
+        <h2 className="text-xl font-semibold mt-1">
+          Cartão Black
+        </h2>
+      </div>
+
+      <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center cursor-pointer">
+        <Eye size={18} />
+      </div>
+    </div>
+
+    <div className="mt-10 text-2xl tracking-widest">
+      **** **** **** 7651
+    </div>
+
+    <div className="flex justify-between items-end mt-10 text-sm">
+
+      <div>
+        <p className="text-gray-400">Validade</p>
+        <p className="mt-1">**/**</p>
+      </div>
+
+      <div>
+        <p className="text-gray-400">CVV</p>
+        <p className="mt-1">***</p>
+      </div>
+
+      <CreditCard size={28} className="text-white/80" />
+
+    </div>
+
+  </div>
+</div>
+
+            <div className="bg-white rounded-3xl shadow-md p-8 space-y-6">
+
+  <div className="flex justify-between items-start">
+
+    <div className="flex items-center gap-4">
+      <div className="w-12 h-12 rounded-2xl bg-green-100 flex items-center justify-center text-green-600">
+        <DollarSign size={22} />
+      </div>
+
+      <div>
+        <p className="text-gray-500 text-sm">
+          Limite Disponível
+        </p>
+        <p className="text-xl font-semibold">
+          R$ 19.800,00
+        </p>
+      </div>
+    </div>
+
+    <div className="text-right">
+      <p className="text-gray-500 text-sm">
+        Limite Total
+      </p>
+      <p className="font-semibold">
+        R$ 25.000,00
+      </p>
+    </div>
+
+  </div>
+
+  <div>
+    <div className="flex justify-between text-sm mb-2">
+      <span className="text-gray-500">Utilizado</span>
+      <span className="font-medium">20.8%</span>
+    </div>
+
+    <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+      <div className="h-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full w-[20.8%]" />
+    </div>
+
+    <p className="text-xs text-gray-500 mt-2">
+      R$ 5.200,00 utilizado
+    </p>
+  </div>
+
+  <div className="flex gap-4">
+    <button className="flex-1 py-4 rounded-2xl bg-gray-100 flex items-center justify-center gap-2 hover:bg-gray-200 transition">
+      <Lock size={18} />
+      Bloquear
+    </button>
+
+    <button className="flex-1 py-4 rounded-2xl bg-gray-100 flex items-center justify-center gap-2 hover:bg-gray-200 transition">
+      <FileText size={18} />
+      Fatura
+    </button>
+  </div>
+
+</div>
+
+            <button className="w-full py-5 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium shadow-md hover:opacity-90 transition flex items-center justify-center gap-2">
+    <CreditCard size={20} />
+    Solicitar Novo Cartão
+</button>
+
         </div>
     );
 };
