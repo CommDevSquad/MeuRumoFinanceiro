@@ -138,7 +138,7 @@ const Investments = () => {
                     </div>
                 ))}
 
-                <button className="w-full py-4 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium shadow-md hover:opacity-90 transition flex items-center justify-center gap-2">
+                <button className="w-full py-4 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium shadow-md hover:opacity-90 transition flex items-center justify-center gap-2 cursor-pointer">
                     <PiggyBankIcon size={18} />
                     Novo Investimento
                 </button>
