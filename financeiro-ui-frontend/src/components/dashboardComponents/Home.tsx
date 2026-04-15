@@ -88,13 +88,13 @@ export default function Home() {
     ];
 
     return (
-        <div className="p-6 bg-gray-100">
+        <div className="p-6 bg-gray-100 dark:bg-gray-900 transition-colors">
             <section className="grid grid-cols-2 gap-6">
 
                 {cards.map((card, index) => (
                     <div
                         key={index}
-                        className="bg-white rounded-2xl p-6 shadow-sm flex justify-between items-start"
+                        className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm flex justify-between items-start transition-colors"
                     >
                         <div>
                             <div
@@ -103,8 +103,8 @@ export default function Home() {
                                 {card.icon}
                             </div>
 
-                            <p className="text-gray-500 text-sm">{card.title}</p>
-                            <h2 className="text-2xl font-bold text-gray-900">
+                            <p className="text-gray-500 dark:text-gray-300 text-sm">{card.title}</p>
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                                 {card.value}
                             </h2>
                         </div>
@@ -120,8 +120,8 @@ export default function Home() {
 
 
             <section className="grid grid-cols-2 gap-6 mt-6">
-                <div className="bg-gray-50 p-6 rounded-2xl shadow-sm">
-                    <h2 className="text-2xl font-bold mb-4">Evolução do Saldo</h2>
+                <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-sm transition-colors">
+                    <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Evolução do Saldo</h2>
 
                     <ResponsiveContainer width="100%" height={250}>
                         <LineChart data={saldoData}>
@@ -145,8 +145,8 @@ export default function Home() {
                 </div>
 
 
-                <div className="bg-gray-50 p-6 rounded-2xl shadow-sm">
-                    <h2 className="text-2xl font-bold mb-4">Receitas vs Despesas</h2>
+                <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-sm transition-colors">
+                    <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Receitas vs Despesas</h2>
 
                     <ResponsiveContainer width="100%" height={250}>
                         <BarChart data={receitasDespesasData} barCategoryGap="25%">
@@ -180,13 +180,13 @@ export default function Home() {
             <section className="grid grid-cols-2 gap-6 mt-6">
 
                 {actions.map((action, index) => (
-                    <div key={index} className="bg-gray-50 rounded-2xl p-6 shadow-sm flex items-center gap-4 cursor-pointer hover:shadow-md transition">
+                    <div key={index} className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 shadow-sm flex items-center gap-4 cursor-pointer hover:shadow-md transition">
 
                         <div className={`w-14 h-14 flex items-center justify-center rounded-xl ${action.bg}`}>
                             {action.icon}
                         </div>
 
-                        <span className="text-lg font-semibold">
+                        <span className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                             {action.title}
                         </span>
 

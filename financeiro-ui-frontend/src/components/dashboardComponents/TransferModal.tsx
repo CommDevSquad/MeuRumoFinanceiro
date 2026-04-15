@@ -28,19 +28,19 @@ export const TransferModal = ({ isOpen, onClose }: TransferModalProps) => {
             />
 
             {/* Modal */}
-            <div className="relative w-full max-w-md bg-white rounded-3xl p-6 transition-colors">
+            <div className="relative w-full max-w-md bg-white dark:bg-gray-800 rounded-3xl p-6 transition-colors">
                 <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-3">
                         <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-300 to-blue-400 flex items-center justify-center">
                             <ArrowLeftRight className="w-6 h-6 text-white" />
                         </div>
-                        <h2 className="text-2xl font-bold text-gray-900">Transferir</h2>
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Transferir</h2>
                     </div>
                     <button
                         onClick={onClose}
-                        className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                        className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors"
                     >
-                        <X className="w-6 h-6 text-gray-700" />
+                        <X className="w-6 h-6 text-gray-700 dark:text-gray-200" />
                     </button>
                 </div>
 
@@ -56,7 +56,7 @@ export const TransferModal = ({ isOpen, onClose }: TransferModalProps) => {
                                 value={recipient}
                                 onChange={(e) => setRecipient(e.target.value)}
                                 placeholder="Nome ou CPF/CNPJ"
-                                className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400 transition-colors"
+                                className="w-full pl-12 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-400 transition-colors"
                                 required
                             />
                         </div>
@@ -73,7 +73,7 @@ export const TransferModal = ({ isOpen, onClose }: TransferModalProps) => {
                                 value={amount}
                                 onChange={(e) => setAmount(e.target.value)}
                                 placeholder="0,00"
-                                className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400 transition-colors [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                                className="w-full pl-12 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-400 transition-colors [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                                 required
                             />
                         </div>
@@ -86,7 +86,7 @@ export const TransferModal = ({ isOpen, onClose }: TransferModalProps) => {
                         <textarea
                             placeholder="Adicione uma descrição..."
                             rows={3}
-                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400 transition-colors resize-none"
+                            className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-400 transition-colors resize-none"
                         />
                     </div>
 
@@ -94,7 +94,7 @@ export const TransferModal = ({ isOpen, onClose }: TransferModalProps) => {
                         <button
                             type="button"
                             onClick={onClose}
-                            className="flex-1 px-6 py-3 bg-gray-100  text-gray-700 rounded-xl font-semibold hover:bg-gray-200 transition-colors"
+                            className="flex-1 px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-100 rounded-xl font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
                         >
                             Cancelar
                         </button>

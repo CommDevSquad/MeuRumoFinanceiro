@@ -2,9 +2,9 @@ import { Eye, CreditCard, Lock, FileText, DollarSign } from "lucide-react";
 
 const Cards = () => {
     return (
-        <div className="p-8 space-y-8 bg-gray-100 min-h-screen pb-28">
+        <div className="p-8 space-y-8 bg-gray-100 dark:bg-gray-900 min-h-screen pb-28 transition-colors">
 
-            <div className="relative rounded-3xl p-8 text-white overflow-hidden shadow-lg bg-gradient-to-br from-indigo-500 via-purple-500 to-fuchsia-600">
+            <div className="relative rounded-3xl p-8 text-white overflow-hidden shadow-lg bg-linear-to-br from-indigo-500 via-purple-500 to-fuchsia-600">
 
                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"></div>
                 <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full"></div>
@@ -45,30 +45,30 @@ const Cards = () => {
                 </div>
             </div>
 
-            <div className="bg-white rounded-3xl shadow-md p-8 space-y-6">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-md p-8 space-y-6 transition-colors">
 
                 <div className="flex justify-between items-center">
 
                     <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-2xl bg-green-100 flex items-center justify-center text-green-600">
+                        <div className="w-12 h-12 rounded-2xl bg-green-100 dark:bg-green-900/40 flex items-center justify-center text-green-600 dark:text-green-300">
                             <DollarSign size={22} />
                         </div>
 
                         <div>
-                            <p className="text-gray-500 text-sm">
+                            <p className="text-gray-500 dark:text-gray-300 text-sm">
                                 Limite Disponível
                             </p>
-                            <p className="text-xl font-semibold">
+                            <p className="text-xl font-semibold text-gray-900 dark:text-gray-100">
                                 R$ 11.600,00
                             </p>
                         </div>
                     </div>
 
                     <div className="text-right">
-                        <p className="text-gray-500 text-sm">
+                        <p className="text-gray-500 dark:text-gray-300 text-sm">
                             Limite Total
                         </p>
-                        <p className="font-semibold">
+                        <p className="font-semibold text-gray-900 dark:text-gray-100">
                             R$ 15.000,00
                         </p>
                     </div>
@@ -76,26 +76,26 @@ const Cards = () => {
 
                 <div>
                     <div className="flex justify-between text-sm mb-2">
-                        <span>Utilizado</span>
-                        <span className="font-medium">22.7%</span>
+                        <span className="text-gray-700 dark:text-gray-200">Utilizado</span>
+                        <span className="font-medium text-gray-900 dark:text-gray-100">22.7%</span>
                     </div>
 
-                    <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                        <div className="h-2 bg-gradient-to-r from-purple-500 to-indigo-500 w-[22.7%] rounded-full"></div>
+                    <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div className="h-2 bg-linear-to-r from-purple-500 to-indigo-500 w-[22.7%] rounded-full"></div>
                     </div>
 
-                    <p className="text-xs text-gray-500 mt-2">
+                    <p className="text-xs text-gray-500 dark:text-gray-300 mt-2">
                         R$ 3.400,00 utilizado
                     </p>
                 </div>
 
                 <div className="flex gap-4">
-                    <button className="flex-1 py-4 rounded-2xl bg-gray-100 flex items-center justify-center gap-2 hover:bg-gray-200 transition">
+                    <button className="flex-1 py-4 rounded-2xl bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 flex items-center justify-center gap-2 hover:bg-gray-200 dark:hover:bg-gray-600 transition">
                         <Lock size={18} />
                         Bloquear
                     </button>
 
-                    <button className="flex-1 py-4 rounded-2xl bg-gray-100 flex items-center justify-center gap-2 hover:bg-gray-200 transition">
+                    <button className="flex-1 py-4 rounded-2xl bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 flex items-center justify-center gap-2 hover:bg-gray-200 dark:hover:bg-gray-600 transition">
                         <FileText size={18} />
                         Fatura
                     </button>

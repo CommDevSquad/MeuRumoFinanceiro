@@ -46,22 +46,22 @@ export const Login = ({ onLogin, onGoToRegister, onGoToForgotPassword }: LoginPr
     };
 
     return (
-        <main className="flex flex-col items-center justify-center h-screen bg-[var(--color-blue-50)] py-[40px]">
+        <main className="flex flex-col items-center justify-center h-screen bg-[var(--color-blue-50)] dark:bg-transparent py-[40px] transition-colors">
             <div className="flex flex-col items-center justify-center">
                 <div className="flex flex-col items-center justify-center mb-[30px]">
                     <h1 className="text-5xl font-bold mb-3 leading-[43px]">
                         <span className="text-blue-600 dark:text-blue-400">Meu</span>{' '}
                         <span className="text-sky-500 dark:text-sky-400">Rumo</span>
                     </h1>
-                    <p className="text-[var(--color-gray-700)]">Organize suas finanças com inteligência</p>
+                    <p className="text-[var(--color-gray-700)] dark:text-gray-300">Organize suas finanças com inteligência</p>
                 </div>
 
-                <div className="flex flex-col justify-center bg-white shadow-md w-[500px] p-[33px] rounded-[25px]">
-                    <h2 className="text-[23px] font-bold mb-[20px]">Bem-vindo de volta!</h2>
+                <div className="flex flex-col justify-center bg-white dark:bg-gray-800 shadow-md w-[500px] p-[33px] rounded-[25px] transition-colors">
+                    <h2 className="text-[23px] font-bold mb-[20px] text-gray-900 dark:text-gray-100">Bem-vindo de volta!</h2>
 
                     <form onSubmit={handleSubmit}>
                         <div className="mb-[20px]">
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                                 E-mail
                             </label>
                             <div className="relative">
@@ -72,14 +72,14 @@ export const Login = ({ onLogin, onGoToRegister, onGoToForgotPassword }: LoginPr
                                     onChange={(e) => setEmail(e.target.value)}
                                     onBlur={handleEmailBlur}
                                     placeholder="exemplo@email.com"
-                                    className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-40 transition-colors"
+                                    className="w-full pl-12 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 dark:text-gray-100 placeholder-gray-40 dark:placeholder-gray-400 transition-colors"
                                     required
                                 />
                             </div>
                         </div>
 
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                                 Senha
                             </label>
                             <div className="relative">
@@ -88,13 +88,13 @@ export const Login = ({ onLogin, onGoToRegister, onGoToForgotPassword }: LoginPr
                                     type={showPassword ? 'text' : 'password'}
                                     onChange={(e) => setPassword(e.target.value)}
                                     placeholder="••••••••"
-                                    className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-40 transition-colors"
+                                    className="w-full pl-12 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 dark:text-gray-100 placeholder-gray-40 dark:placeholder-gray-400 transition-colors"
                                     required
                                 />
                                 <button
                                     type="button"
                                     onClick={() => setShowPassword(!showPassword)}
-                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-60"
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-300 hover:text-gray-60 dark:hover:text-gray-100"
                                 >
                                     {showPassword ? (
                                         <EyeOff className="w-5 h-5" />
@@ -124,17 +124,17 @@ export const Login = ({ onLogin, onGoToRegister, onGoToForgotPassword }: LoginPr
 
                         <div className="relative my-6">
                             <div className="absolute inset-0 flex items-center">
-                                <div className="w-full border-t border-gray-200"></div>
+                                <div className="w-full border-t border-gray-200 dark:border-gray-600"></div>
                             </div>
                             <div className="relative flex justify-center text-sm">
-                                <span className="px-4 bg-white text-gray-500">
+                                <span className="px-4 bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-300">
                                     ou
                                 </span>
                             </div>
                         </div>
 
                         <div className="text-center">
-                            <p className="text-gray-700 text-sm">
+                            <p className="text-gray-700 dark:text-gray-300 text-sm">
                                 Ainda não tem uma conta?{' '}
                                 <button
                                     onClick={onGoToRegister}

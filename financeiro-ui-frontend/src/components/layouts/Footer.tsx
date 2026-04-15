@@ -7,6 +7,7 @@ import { PayModal } from "../dashboardComponents/PayModal";
 import { TransferModal } from "../dashboardComponents/TransferModal";
 
 export default function Footer() {
+
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
@@ -31,13 +32,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="fixed bottom-0 left-0 w-full bg-gray-50 border-t shadow-md">
+    <footer className="fixed bottom-0 left-0 w-full bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-md transition-colors">
       <div className="relative flex justify-around items-center py-3">
 
         <button
           type="button"
           onClick={goToHome}
-          className={`flex flex-col items-center ${isActiveRoute("/dashboard") ? "text-indigo-600" : "text-gray-500"}`}
+          className={`flex flex-col items-center cursor-pointer ${isActiveRoute("/dashboard") ? "text-indigo-600 dark:text-indigo-400" : "text-gray-500 dark:text-gray-300"}`}
         >
           <Home size={22} />
           <span className="text-xs mt-1">Início</span>
@@ -46,7 +47,7 @@ export default function Footer() {
         <button
           type="button"
           onClick={goToInvestments}
-          className={`flex flex-col items-center ${isActiveRoute("/dashboard/investimentos") ? "text-indigo-600" : "text-gray-500"}`}
+          className={`flex flex-col cursor-pointer items-center ${isActiveRoute("/dashboard/investimentos") ? "text-indigo-600 dark:text-indigo-400" : "text-gray-500 dark:text-gray-300"}`}
         >
           <TrendingUp size={22} />
           <span className="text-xs mt-1">Investir</span>
@@ -56,7 +57,7 @@ export default function Footer() {
           <button
             type="button"
             onClick={() => setShowQuickActions(true)}
-            className="w-14 h-14 rounded-full bg-indigo-600 text-white flex items-center justify-center shadow-lg"
+            className="w-14 cursor-pointer h-14 rounded-full bg-indigo-600 text-white flex items-center justify-center shadow-lg"
           >
             <Plus size={28} />
           </button>
@@ -65,7 +66,7 @@ export default function Footer() {
         <button
           type="button"
           onClick={goToCards}
-          className={`flex flex-col items-center ${isActiveRoute("/dashboard/cartoes") ? "text-indigo-600" : "text-gray-500"}`}
+          className={`flex flex-col cursor-pointer items-center ${isActiveRoute("/dashboard/cartoes") ? "text-indigo-600 dark:text-indigo-400" : "text-gray-500 dark:text-gray-300"}`}
         >
           <CreditCard size={22} />
           <span className="text-xs mt-1">Cartões</span>
@@ -74,7 +75,7 @@ export default function Footer() {
         <button
           type="button"
           onClick={goToProfile}
-          className={`flex flex-col items-center ${isActiveRoute("/dashboard/perfil") ? "text-indigo-600" : "text-gray-500"}`}
+          className={`flex flex-col cursor-pointer items-center ${isActiveRoute("/dashboard/perfil") ? "text-indigo-600 dark:text-indigo-400" : "text-gray-500 dark:text-gray-300"}`}
         >
           <User size={22} />
           <span className="text-xs mt-1">Perfil</span>
