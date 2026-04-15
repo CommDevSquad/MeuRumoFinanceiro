@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from "react-router";
+import { createHashRouter, Navigate } from "react-router-dom";
 import { AuthLayout } from "../components/layouts/AuthLayout";
 import { DashboardLayout } from "../components/layouts/DashboardLayout";
 import { LoginPage } from "../pages/authPages/LoginPage";
@@ -14,7 +14,7 @@ const isAuthenticated = () => {
     return localStorage.getItem('isAuthenticated') === 'true';
 };
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
     {
         path: "/",
         element: isAuthenticated() ? <Navigate to="/dashboard" replace /> : <Navigate to="/login" replace />,
@@ -62,5 +62,5 @@ export const router = createBrowserRouter([
     {
         path: "*",
         element: <Navigate to="/login" replace />,
-    },
+    }
 ]);

@@ -48,13 +48,13 @@ const investments = [
 
 const Investments = () => {
     return (
-        <div className="p-8 space-y-8 bg-gray-100 min-h-screen">
+        <div className="p-8 space-y-8 bg-gray-100 dark:bg-gray-900 min-h-screen transition-colors">
 
-            <div className="bg-white rounded-3xl shadow-md p-8 flex justify-between items-center">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-md p-8 flex justify-between items-center transition-colors">
                 <div>
-                    <p className="text-gray-500 mb-2">Total Investido</p>
+                    <p className="text-gray-500 dark:text-gray-300 mb-2">Total Investido</p>
 
-                    <h2 className="text-3xl font-bold text-gray-900">
+                    <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
                         R$ 25.600,00
                     </h2>
 
@@ -64,13 +64,13 @@ const Investments = () => {
                     </div>
                 </div>
 
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-indigo-400 to-indigo-600 text-white">
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-linear-to-br from-indigo-400 to-indigo-600 text-white">
                     <PiggyBank size={28} />
                 </div>
             </div>
 
-            <div className="bg-white rounded-3xl shadow-md p-8">
-                <h3 className="text-xl font-semibold mb-8">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-md p-8 transition-colors">
+                <h3 className="text-xl font-semibold mb-8 text-gray-900 dark:text-gray-100">
                     Distribuição do Portfólio
                 </h3>
 
@@ -99,15 +99,15 @@ const Investments = () => {
                 </div>
             </div>
 
-            <div className="bg-white rounded-3xl shadow-md p-8 space-y-6">
-                <h3 className="text-xl font-semibold">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-md p-8 space-y-6 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
                     Meus Investimentos
                 </h3>
 
                 {investments.map((item, index) => (
                     <div
                         key={index}
-                        className="flex items-center justify-between bg-gray-50 rounded-2xl p-5 shadow-sm"
+                        className="flex items-center justify-between bg-gray-50 dark:bg-gray-700 rounded-2xl p-5 shadow-sm transition-colors"
                     >
 
                         <div className="flex items-center gap-4">
@@ -118,17 +118,17 @@ const Investments = () => {
                             </div>
 
                             <div>
-                                <p className="font-medium text-gray-900">
+                                <p className="font-medium text-gray-900 dark:text-gray-100">
                                     {item.name}
                                 </p>
-                                <p className="text-sm text-gray-500">
+                                <p className="text-sm text-gray-500 dark:text-gray-300">
                                     {item.type}
                                 </p>
                             </div>
                         </div>
 
                         <div className="text-right">
-                            <p className="font-semibold text-gray-900">
+                            <p className="font-semibold text-gray-900 dark:text-gray-100">
                                 {item.value}
                             </p>
                             <p className="text-green-600 text-sm font-medium">
@@ -138,7 +138,7 @@ const Investments = () => {
                     </div>
                 ))}
 
-                <button className="w-full py-4 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium shadow-md hover:opacity-90 transition flex items-center justify-center gap-2">
+                <button className="w-full py-4 rounded-2xl bg-linear-to-r from-indigo-500 to-purple-600 text-white font-medium shadow-md hover:opacity-90 transition flex items-center justify-center gap-2">
                     <PiggyBankIcon size={18} />
                     Novo Investimento
                 </button>
